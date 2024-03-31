@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soliton Cart</title>
+    <link rel="icon" type="image/png" href="solitonlogo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="../css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Logo icon -->
+    <img class="logo-img" src="solitonlogo.png" />
+    <img class="cart-img" src="cartimg.png" />
+    <!-- main body of the webpage -->
+
+    <main class="main-container">
+      <!-- Login page -->
+      <section class="log-in-page hidden">
+        <h5>Welcome to Soliton's e-cart</h5>
+        <input
+          type="text"
+          placeholder="User Name"
+          class="input-name input-name-signin"
+        />
+        <input
+          type="password"
+          maxlength="6"
+          placeholder="Password"
+          class="input-password input-password-signin"
+        />
+        <button class="btn-signin">Sign - in</button>
+        <hr />
+        <h6>New to Soliton e-cart?</h6>
+        <button class="btn-create-new-account">Create new account</button>
+      </section>
+
+      <!-- Create account page -->
+      <section class="create-account-page hidden">
+        <h5>Enter account details</h5>
+        <input
+          type="text"
+          placeholder="User Name"
+          class="input-name input-name-create"
+        />
+        <input
+          type="password"
+          maxlength="6"
+          placeholder="Password"
+          class="input-password input-password-create"
+        />
+        <select class="select-usertype">
+          <option value="" disabled selected hidden>Select account type</option>
+          <option>Buyer</option>
+          <option>Seller</option>
+        </select>
+        <button class="btn-create-account">Create account</button>
+        <button class="btn-back">Back</button>
+      </section>
+
+      <!-- Seller page -->
+      <section class="seller-page hidden">
+        <div class="btn-to-add-page">
+          <i style="font-size: 70px" class="fa">+</i>
+        </div>
+        <div class="seller-items-to-display">
+          <h3>Click the above button to add items to shop</h3>
+          <br />
+          <h3>Items sold by Me:</h3>
+          <div class="seller-all-item">
+            <!-- <div class="seller-items">
+            <div class="seller-product-img"></div>
+            <p class="seller-product-name">Name of the product</p>
+            <p class="seller-product-cost">Cost of the product</p>
+            <p class="seller-product-quantity">Quantity</p>
+            <button class="btn-modify">Modify</button>
+          </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Seller add page -->
+      <section class="seller-add-page hidden">
+        <input
+          type="text"
+          placeholder="Item name"
+          class="input-seller-item-name"
+        />
+        <input
+          type="number"
+          placeholder="Cost"
+          class="input-seller-item-cost"
+        />
+        <input
+          type="number"
+          placeholder="Quantity"
+          class="input-seller-item-quantity"
+        />
+        <input type="file" class="item-img" accept="image/png, image/jpg" />
+
+        <button class="btn-add-items">Add items</button>
+        <button class="btn-seller-back btn-end">Back</button>
+      </section>
+
+      <!-- Seller modify page -->
+      <section class="seller-modify-page hidden">
+        <input
+          type="text"
+          placeholder="Item name"
+          class="seller-modify-item-name"
+        />
+        <input
+          type="number"
+          placeholder="Cost"
+          class="seller-modify-item-cost"
+        />
+        <input
+          type="number"
+          placeholder="Quantity"
+          class="seller-modify-item-quantity"
+        />
+        <input
+          type="file"
+          class="item-img-modify-page"
+          accept="image/png, image/jpg"
+        />
+
+        <button class="btn-modify-items">Modify</button>
+        <button class="btn-modify-back btn-end">Back</button>
+      </section>
+
+      <!-- Buyer page -->
+      <section class="buyer-page hidden">
+        <div class="btn-cart">
+          <i style="font-size: 70px" class="fa">&#xf07a;</i>
+        </div>
+        <div class="items-to-display">
+          <!-- <div class="buyer-items">
+            <div class="product-img"></div>
+            <p class="product-name">Name of the product</p>
+            <p class="product-cost">Cost of the product</p>
+            <p class="product-quantity">Quantity</p>
+            <input class="input-quantity" type="number" min="1" value="1" />
+            <button class="btn-product-tocart">Add to cart</button>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Buyer cart page -->
+      <section class="buyer-cart-page hidden">
+        <h1>Items in your cart</h1>
+        <div class="items-in-cart">
+          <!-- <div class="cart-item">
+            <div class="product-img"></div>
+            <p class="product-name">Name of the product</p>
+            <p class="product-quantity">Quantity: 1</p>
+            <p class="product-cost">Cost of the product</p>
+          </div>
+          <div class="cart-item">
+            <div class="product-img"></div>
+            <p class="product-name">Name of the product</p>
+            <p class="product-quantity">Quantity: 1</p>
+            <p class="product-cost">Cost of the product</p>
+          </div>
+          <div class="cart-item">
+            <div class="product-img"></div>
+            <p class="product-name">Name of the product</p>
+            <p class="product-quantity">Quantity: 1</p>
+            <p class="product-cost">Cost of the product</p>
+          </div>
+          <div class="cart-item">
+            <div class="product-img"></div>
+            <p class="product-name">Name of the product</p>
+            <p class="product-quantity">Quantity: 1</p>
+            <p class="product-cost">Cost of the product</p>
+          </div>
+          <div class="cart-item">
+            <div class="product-img"></div>
+            <p class="product-name">Name of the product</p>
+            <p class="product-quantity">Quantity: 1</p>
+            <p class="product-cost">Cost of the product</p>
+          </div> -->
+        </div>
+        <h2 class="display-amount">
+          Subtotal: <span class="total-amount">$100</span>
+        </h2>
+        <button class="btn-checkout btn-end">Checkout</button>
+        <button class="btn-buyer-back btn-end">Back</button>
+      </section>
+      <section class="success-page hidden">
+        <h1>Your order has been placed successfully 🎉</h1>
+        <button class="btn-homepage btn-end">Continue Shopping</button>
+        <button class="btn-logout btn-end">Logout</button>
+      </section>
+    </main>
+  </body>
+  <script src="../javascript/commerce.js"></script>
+</html>
